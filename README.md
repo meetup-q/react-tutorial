@@ -1,34 +1,37 @@
 # react-tutorial
 
-React.js 是由 Facebook 開發，跟據 stackoverflow 的調查，它超越了 jQuery 成為全世界最多人使用的前端框架。
+[React.js](https://reactjs.org/) 是由 Facebook 開發，跟據 stackoverflow 的調查，它超越了 jQuery 成為全世界最多人使用的前端框架。
+
+在這個教學裡，我們會依照 react.js 的官方的教學文件做出第一個 react.js application。[官方範例](https://reactjs.org/tutorial/tutorial.html)非常棒，幾乎包含了 react.js 的基本概念。
+
 
 # table of content
 
-0. javascripy history
-1. ES6
+## Introduction to JavaScript
+1. EcmaScript
+1. ES5 ES6 ... ES2021
 2. node.js
-3. CSR vs SSR
 4. jsx
 5. babel
-6. state and props
-7. folder structure
+
+## example app 1 - tic tac toe
+
+1. react official doc tutorial
+
+## example app 2 - star wars challenge
+
+1. star wars api
+
+# React.js features
+
+1. declarative
 8. component lifecycle
 9. virtual dom
-1. SPA
-2. one way data binding
-3. declarative UI
-4. redux
-5. build
-6. webpack
+1. state and props
+2. one way data flow
+1. Single Page App
 7. code split
 8. PWA
-
-# Tutorial-1
-
-
-
-# Tutorial-2
-
-# Tutorial-3
-
-# Tutorial-4
+----------------------
+1. redux
+2. webpack
