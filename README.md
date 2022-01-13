@@ -7,18 +7,18 @@
 
 # table of content
 
-## Introduction to JavaScript
+## Introduction to JavaScript (1)
 1. EcmaScript
 1. ES5 ES6 ... ES2021
 2. node.js
 4. jsx
 5. babel
 
-## example app 1 - tic tac toe
+## example app 1 - tic tac toe (2)
 
 1. react official doc tutorial
 
-## example app 2 - star wars challenge
+## example app 2 - star wars challenge (3,4)
 
 1. star wars api
 
