@@ -14,11 +14,11 @@
 4. jsx
 5. babel
 
-## example app 1 - tic tac toe (2)
+## 範例一 - tic tac toe (2)
 
 1. react official doc tutorial
 
-## example app 2 - star wars challenge (3,4)
+## 範例二 - star wars challenge (3,4)
 
 1. star wars api
 
@@ -32,6 +32,8 @@
 1. Single Page App
 7. code split
 8. PWA
-----------------------
+
+
+# 相關工具
 1. redux
 2. webpack
