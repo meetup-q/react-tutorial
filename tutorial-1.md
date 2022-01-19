@@ -52,19 +52,21 @@ EcmaScript 每年更新但是 Browser 的支援進度跟不上，而 Developers 
 # npm
 npm 是 node.js 套件管理器（node.js package manager）由 npm inc. 維護。npm inc. 是一家營利公司，2020 年被 microsoft 收購，同年 npm 宣布移入 GitHub。[^1]
 
-
+[^1]:Github 也為 microsoft 的子公司，此舉被解讀為增加 JavaScript 使用人數。
 
 # node.js
 Ryan Dahl 在 2009 年發表了 node.js，一個基於 V8 engine 製作的 run time language，它的出現使得前後端都使用 javascript 得以成真。
 
 注意 node.js 跟前端的 javascript 本質上是不一樣的語言。在 client-side 運行的  javascript 是遵行 EcmaScript 規範的語言，不同 Browser 因為直譯器不同的關係，有些許運行上的差異；而 node.js 的直譯器是 Chrome 的 V8 engine。
 
-Developers 應該謹記著 JavaScript 與 node.js 兩著不同的事實，儘管在初淺的應用不會造成任何影像，在開發的深水區會是個問題。[^1]
+Developers 應該謹記著 JavaScript 與 node.js 兩著不同的事實，儘管在初淺的應用不會造成任何影像，在開發的深水區會是個問題。
 
-[^1]: Github 也為 microsoft 的子公司，此舉被解讀為增加 JavaScript 使用人數。
+
 
 # Deno.js
-Ryan Dahl 在 node.js 十週年之際，列出了 node.js 的十大缺點，接著表示以 TypeScript 的  run time Deno.js 改進了這些缺點。目前 Deno.js 仍處於發展階段，是值得觀察的新工具。[^Deno 的名稱源自於 node 重新排列。]
+Ryan Dahl 在 node.js 十週年之際，列出了 node.js 的十大缺點，接著表示以 TypeScript 的  run time Deno.js 改進了這些缺點。目前 Deno.js 仍處於發展階段，是值得觀察的新工具。[^2]
+
+[^2]:Deno 的名稱源自於 node 重新排列。
 
 # React.js
  
