@@ -1,8 +1,12 @@
-# Tutorial 2
+# Tutorial 2: tic-tac-toe game
 
 上一個教學我們已經學會怎麼使用 ES6 的語法和 npm 了，Let's get into code。
 
 我們會進行 [React.js 官方教學](https://reactjs.org/tutorial/tutorial.html)，在這個教學中我們會完成一個 [Tic Tac Toe 遊戲](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)，並且在這個範例中理解 React.js 的 features。
+
+- [Tutorial 2: tic-tac-toe game](#tutorial-2-tic-tac-toe-game)
+- [Tic Tac Toe Game](#tic-tac-toe-game)
+  - [create react app](#create-react-app)
 
 # Tic Tac Toe Game
 
@@ -17,7 +21,6 @@ npx create-react-app myapp
 ```shell
 npm start
 ```
-
 
 
 

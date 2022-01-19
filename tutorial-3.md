@@ -1,19 +1,14 @@
-# Tutorial 3
+# Tutorial 3: star-wars-app 1
 
-這一篇教學來自官方文件：[React.js Tutorial](https://reactjs.org/tutorial/tutorial.html)，我們會完成一個 react.js 的 application，是一個 tic tac toe 遊戲（圈圈叉叉），這個範例可以讓我們學習到 react.js 的基礎。
+在接下來的兩篇教學中，我們會利用知名的 [Star Wars API](https://swapi.dev/) 來製作一頁面，教學中我們會理解怎麼使用 react.js 來製作出一個頁面。
 
-- [Tutorial 3](#tutorial-3)
-- [Math Part](#math-part)
-- [Content](#content)
+- [Tutorial 3: star-wars-app 1](#tutorial-3-star-wars-app-1)
+- [star-wars-app](#star-wars-app)
 
-
-# Math Part
-$e^2$
-
-
-# Content
-我們開始製作一個 React 專案。
+# star-wars-app
+我們現在應該很熟悉使用
 首先利用 `npx` 創建一個新的 react 專案，`npx` 是 `npm` 的指令，這個指令會檢查當前路徑中的是否存在 `create-react-app` 工具，若無則會先下載 `create-react-app` 工具後再刪除。
-```
+
+```shell
 npx create-create-app star-wars-app
 ``` 
