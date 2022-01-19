@@ -22,7 +22,12 @@ npx create-react-app myapp
 npm start
 ```
 
+使用下方 code block 的 npm 指令創建一個 react project。指令中的 npx 是 npm 的一項指令，它可以協助下載所有 dependencies；myapp 是專案名稱。成功創造 react 專案之後在 myapp 之內執行 `npm start` 就可以在開發環境運行 react。
+```shell
+npx create-react-app myapp
+```
 
+當我們的專案需要更多套件的時候必須在專案資料夾下執行 `npm install package`，套件會被下載到專案資料夾內，並且記錄在 package.json 裡面。每個專案的 dependencies 都會被下載到自己的 node_modules 資料夾裡面，並不會污染到 global environment。
 
 
 
@@ -92,3 +97,13 @@ ReactDOM.render(
 );
 
 ```
+
+
+one way data flow 是 react 的運作機制，components 的資料只能往 children nodes 傳下去，不能逆流而上。這個機制是為了確保資料更新不混亂。這個機制的缺點是資料交換很麻煩，所以出現了 state 儲存中心的工具 redux。
+
+component lifecycle 是 component 的生命週期，developer 可以依照需求在 component 的某個生命週期執行對應的指令，lifecycle 的主要分類如下：
+1. 
+2. componentDidMount()
+3. componentWillMount()
+
+lifecycle 並非 react 創的特色，html5 的 createElement 也有類似的功能，我們在學習 framework 之餘也應該學習 plain html & javascript。
