@@ -52,11 +52,7 @@ EcmaScript 每年更新但是 Browser 的支援進度跟不上，而 Developers 
 # npm
 npm 是 node.js 套件管理器（node.js package manager）由 npm inc. 維護。npm inc. 是一家營利公司，2020 年被 microsoft 收購，同年 npm 宣布移入 GitHub。[^1]
 
-<<<<<<< HEAD
-[^1]: Github 也為 microsoft 的子公司，此舉被解讀為增加 JavaScript 使用人數。
-=======
 [^1]:Github 也為 microsoft 的子公司，此舉被解讀為增加 JavaScript 使用人數。
->>>>>>> 7ae78af503a56e824437f50a0967df840db4225d
 
 # node.js
 Ryan Dahl 在 2009 年發表了 node.js，一個基於 V8 engine 製作的 run time language，它的出現使得前後端都使用 javascript 得以成真。
@@ -64,14 +60,11 @@ Ryan Dahl 在 2009 年發表了 node.js，一個基於 V8 engine 製作的 run t
 注意 node.js 跟前端的 javascript 本質上是不一樣的語言。在 client-side 運行的  javascript 是遵行 EcmaScript 規範的語言，不同 Browser 因為直譯器不同的關係，有些許運行上的差異；而 node.js 的直譯器是 Chrome 的 V8 engine。
 
 Developers 應該謹記著 JavaScript 與 node.js 兩著不同的事實，儘管在初淺的應用不會造成任何影像，在開發的深水區會是個問題。
-<<<<<<< HEAD
-=======
-
->>>>>>> 7ae78af503a56e824437f50a0967df840db4225d
-
 
 # Deno.js
-Ryan Dahl 在 node.js 十週年之際，列出了 node.js 的十大缺點，接著表示以 TypeScript 的  run time Deno.js 改進了這些缺點。目前 Deno.js 仍處於發展階段，是值得觀察的新工具。[^2]
+Ryan Dahl 在 node.js 十週年之際，列出了 node.js 的十大缺點，
+
+接著發表了 Deno.js 聲稱改進了這些缺點。Deno.js 不僅僅是 JavaScript 的 run time，也是 TypeScript 的 run time。[^2]
 
 [^2]:Deno 的名稱源自於 node 重新排列。
 
@@ -89,6 +82,7 @@ react.js 是 facebook 在 2013 年發表的前端框架，facebook 的前端就�
 8. jsx
 
 使用下方 code block 的 npm 指令創建一個 react project。指令中的 npx 是 npm 的一項指令，它可以協助下載所有 dependencies；myapp 是專案名稱。成功創造 react 專案之後在 myapp 之內執行 `npm start` 就可以在開發環境運行 react。
+
 ```shell
 npx create-react-app myapp
 ```
@@ -207,7 +201,3 @@ component lifecycle 是 component 的生命週期，developer 可以依照需求
 3. componentWillMount()
 
 lifecycle 並非 react 創的特色，html5 的 createElement 也有類似的功能，我們在學習 framework 之餘也應該學習 plain html & javascript。
-
-# React project 實作
-
-接著我們會進行一個 react project。
