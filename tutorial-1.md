@@ -1,76 +1,68 @@
 # [Tutorial 1: JavaScript](./README.md)
 > “Any application that can be written in JavaScript, will eventually be written in JavaScript.” – Jeff Atwood 
 
-JavaScript 的彈性之大，我們日常所見所及都有它的身影。
-
-- [[Tutorial 1: JavaScript]](#tutorial-1-javascript)
+- [Tutorial 1: JavaScript](#tutorial-1-javascript)
 - [JavaScript 的歷史](#javascript-的歷史)
-  - [Brendan Eich - the father of JavaScript](#brendan-eich---the-father-of-javascript)
+  - [EcmaScript & JavaScript](#ecmascript--javascript)
   - [ECMA (European Computer Manufacturers Association)](#ecma-european-computer-manufacturers-association)
-- [ES5](#es5)
-- [ES6](#es6)
+  - [ES5](#es5)
+  - [ES6](#es6)
 - [TypeScript](#typescript)
 - [Babel](#babel)
-- [npm](#npm)
 - [node.js](#nodejs)
 - [Deno.js](#denojs)
+- [npm](#npm)
 - [React.js](#reactjs)
-- [EcmaScript](#ecmascript)
-- [REACT TUTORIAL](#react-tutorial)
-- [React project 實作](#react-project-實作)
+  - [React.js features:](#reactjs-features)
+    - [Single Page Application](#single-page-application)
+    - [Virtual DOM](#virtual-dom)
+    - [JSX](#jsx)
 
 # JavaScript 的歷史
 
-## Brendan Eich - the father of JavaScript
+## EcmaScript & JavaScript
 
+1995 年 12 月，Brendan Eich 在 Netscape 負責設計出應用於瀏覽器的語言，這個語言的名稱從 Mocha 輾轉到 LiveScript 最後在與 Sun Microsystems 聯合發表時公布為 JavaScript。在 1997 年 6 月 Netscape 向 ECMA 提交了 JavaScript 的規格書，在經由審定組織 TC-39 的審定後 ECMA 公告了 ECMA-262，也就是 ES1。以上就是 JavScript 的起源歷史，從中我們可以了解到 JavaScript 就是 EcamScript，前者是語言本身，後者是規格。
+
+ECMA 每過一段時間就會更新 ES，而我們會稱第五代為 ES5、第六代為 ES6。在 ES6 之後因為 JavaScript 的影響力越來越大所以 ECMA 決定每年都會更新 ES，所以我們就以年份替換代數，例如我們會稱 2021 年發出的版本為 ES2021。
 
 ## ECMA (European Computer Manufacturers Association)
 ECMA 原本是歐洲電腦製造協會的縮寫，但是 ECMA 的影響力日漸巨大，遂放棄原本的全稱，以簡寫表示這個組織，稱作 ECMA International。
 
-ECMA 在 1995 年發表的 ECMA-262 就是 ES1。
-
-EcmaScript 是一個語言的 specification，而我們所熟知的 JavaScript 則是依照這個規範所實作出來的語言，任何依照這個規範實作出來的語言都是 EcmaScript，例如 JScript、VBScript 等等。我們將 EcmaScript 簡稱為 ES。
-
-ECMA 每過一段時間就會更新 ES，而我們會稱第五代為 ES5、第六代為 ES6。在 ES6 之後因為 JavaScript 的影響力越來越大所以 ECMA 決定每年都會更新 ES，所以我們就以年份替換代數，例如我們會稱 2021 年發出的版本為 ES2021。
-
-年年更新的 EcmaScript 絕對讓 javascript interpreter 的更新速度跟不上，但 developers 就是喜歡新的功能，所以有了 babel 這樣的工具出現，我們可以盡情地撰寫 ES6 以後的版本，然後在透過 babel 編譯成比較舊版的 ES。
-
-# ES5 
+## ES5 
 ES5 又稱 ES2009，主要新增了 Array 與 Object 的 method，例如 map、reduce、keys。ES5 是重要的里程碑，從這一代開始 ES 變得更好寫了，2009 年至今也超過十年了，發展時間相當長，幾乎所有瀏覽器都支援這個版本。
 
-# ES6
-ES6 又稱 ES2015，做了非常大幅度的更新，新增了 class、async await、arrow function、模組化的功能。也是自 2015 年開始 ECMA 決定每一年更新 EcmaScript。
+## ES6
+ES6 又稱 ES2015，做了非常大幅度的更新，新增了 class、async await、arrow function、模組化的功能，這些功能讓這個語言變得更好上手更好使用，現在主流 JavaScript 的樣貌就是 ES6 的樣貌。也是自 2015 年開始 ECMA 決定每一年更新 EcmaScript。
 
 # TypeScript
-TypeScript 是由 Microsoft 所開發的語言，簡稱 TS，本質上還是 JavaScript，唯一的不同處如其名，要求變數不得改變其型別。因為 JavaScript 誕生之初的目標受眾是 non-programmer如網頁設計師或 Hobbist，必須讓這個語言好學好懂好寫，所以預言設計上不需先行宣告變數型態，然而這是有缺點的，大型程式或多人協作專案可能因為程式碼變數型別問題造成 bug，JavaScript 自行轉換變數的機制讓人困惑，TypeScript 的出現解決了這個問題。
+TypeScript 是由 Microsoft 所開發的語言，簡稱 TS，本質上還是 JavaScript，唯一的不同處如其名，要求變數不得改變其型別。因為 JavaScript 誕生之初的目標受眾是 non-programmer 如網頁設計師，而必須讓這個語言好學好懂好寫，所以設計上不需先行宣告變數型態，然而這是有缺點的。大型程式或多人協作專案可能因為程式碼變數型別管理不易造成 bug。
 
 # Babel
 EcmaScript 每年更新但是 Browser 的支援進度跟不上，而 Developers 又是喜新厭舊的人群，該怎麼辦呢？
 
 雖然 interpreter 還未支援新的語法，但其實新的語法可以原語法實現的，例如 ES5 Array.map 就可以用 for loop 實現。所以我們可以用一個 convertor 將新的語法以原語法重構，這就是 Babel 的功能。因為所有 Browser 都對 ES5 全面支援了，所以我們會將語法轉換成 ES5。
 
-# npm
-npm 是 node.js 套件管理器（node.js package manager）由 npm inc. 維護。npm inc. 是一家營利公司，2020 年被 microsoft 收購，同年 npm 宣布移入 GitHub。[^1]
-
-[^1]:Github 也為 microsoft 的子公司，此舉被解讀為增加 JavaScript 使用人數。
-
 # node.js
-Ryan Dahl 在 2009 年發表了 node.js，一個基於 V8 engine 製作的 run time language，它的出現使得前後端都使用 javascript 得以成真。
+Ryan Dahl 在 2009 年發表了 node.js，一個基於 Chrome V8 engine 製作的 run time language，它的出現使得前後端都使用 javascript 得以成真。
 
-注意 node.js 跟前端的 javascript 本質上是不一樣的語言。在 client-side 運行的  javascript 是遵行 EcmaScript 規範的語言，不同 Browser 因為直譯器不同的關係，有些許運行上的差異；而 node.js 的直譯器是 Chrome 的 V8 engine。
-
-Developers 應該謹記著 JavaScript 與 node.js 兩著不同的事實，儘管在初淺的應用不會造成任何影像，在開發的深水區會是個問題。
+注意 node.js 跟前端的 JavaScript 本質上是不一樣的語言。在 client-side 運行的  javascript 是遵行 EcmaScript 規範的語言，不同瀏覽器因為直譯器不同的關係，有些許運行上的差異；而 node.js 的直譯器是 Chrome 的 V8 engine。
 
 # Deno.js
-Ryan Dahl 在 node.js 十週年之際，列出了 node.js 的十大缺點，
+Ryan Dahl 在 node.js 十週年之際，列出了 node.js 的十大缺點，接著發表了 Deno.js 聲稱改進了這些缺點。[^2]Deno.js 最大的特色莫過於它同時也是 TypeScript 的 run time environment，廣受歡迎的 TypeScript 只要使用 Deno.js 就不需要先行編譯成 JavaScript 的語法，可以直接被 Deno.js 運行。
 
-接著發表了 Deno.js 聲稱改進了這些缺點。Deno.js 不僅僅是 JavaScript 的 run time，也是 TypeScript 的 run time。[^2]
+Deno.js 目前雖然還沒有辦法取代 node.js，但它是值得投資的超級新星。
 
 [^2]:Deno 的名稱源自於 node 重新排列。
 
+# npm
+npm 是 node.js 套件管理器（node.js package manager），原始作者是 Isaac Z. Schlueter.，目前由 npm, inc. 維護。而 npm inc. 是一家營利公司，2020 年被 microsoft 收購，同年 npm 宣布移入 GitHub。[^1]
+
+[^1]:Github 也為 microsoft 的子公司，此舉被解讀為增加 JavaScript 使用人數。
+
 # React.js
  
-React.js 是 Facebook 在 2013 年發表的前端框架，因為 React.js 發表早於 2015 年的 ES6 而沒有 module system，所以公開之出還提出漸進引入的方法。跟據 stack overflow 與 GitHub 調查，react.js 是世界上最活躍的前端框架。
+React.js 是 Facebook 在 2013 年發表的前端框架。跟據 stack overflow 與 GitHub 調查，react.js 是世界上最活躍的前端框架。
 
 ## React.js features:
 1. Declarative
@@ -82,11 +74,7 @@ React.js 是 Facebook 在 2013 年發表的前端框架，因為 React.js 發表
 7. virtual dom
 8. jsx
 
-使用下方 code block 的 npm 指令創建一個 react project。指令中的 npx 是 npm 的一項指令，它可以協助下載所有 dependencies；myapp 是專案名稱。成功創造 react 專案之後在 myapp 之內執行 `npm start` 就可以在開發環境運行 react。
 
-```shell
-npx create-react-app myapp
-```
 
 當我們的專案需要更多套件的時候必須在專案資料夾下執行 `npm install package`，套件會被下載到專案資料夾內，並且記錄在 package.json 裡面。每個專案的 dependencies 都會被下載到自己的 node_modules 資料夾裡面，並不會污染到 global environment。
 
@@ -135,6 +123,13 @@ render(){
 
 
 ==========================================================
+
+<!-- 使用下方 code block 的 npm 指令創建一個 react project。指令中的 npx 是 npm 的一項指令，它可以協助下載所有 dependencies；myapp 是專案名稱。成功創造 react 專案之後在 myapp 之內執行 `npm start` 就可以在開發環境運行 react。
+
+```shell
+npx create-react-app myapp
+``` -->
+
 
 <!-- # EcmaScript
 EcmaScript 是一個語言的 specification，而 javascript 則是依照 EcmaScript 的規範所實作出來的語言，所以 JavaScript 就是 EcmaScript，我們簡稱 ES。ES 每過一段時間就會更新，當我們會稱第五代為 ES5、第六代為 ES6。ES6 之後因為 javascript 的影響力越來越大所以 ECMA(Ecma International) 決定每年都會更新，例如我們會稱 2021 年發出的版本為 ES2021。
