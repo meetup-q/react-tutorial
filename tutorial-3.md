@@ -1,14 +1,9 @@
-# Tutorial 3: star-wars-app 1
+<h1>Tutorial 3: react-app 1</h1>
 
-在接下來的兩篇教學中，我們會利用知名的 [Star Wars API](https://swapi.dev/) 來製作一頁面，教學中我們會理解怎麼使用 react.js 來製作出一個頁面。
 
-- [Tutorial 3: star-wars-app 1](#tutorial-3-star-wars-app-1)
-- [star-wars-app](#star-wars-app)
+# React app
 
-# star-wars-app
-我們現在應該很熟悉使用
-首先利用 `npx` 創建一個新的 react 專案，`npx` 是 `npm` 的指令，這個指令會檢查當前路徑中的是否存在 `create-react-app` 工具，若無則會先下載 `create-react-app` 工具後再刪除。
-
-```shell
-npx create-create-app star-wars-app
-``` 
+完成官方的教學之後，我們已經初步了解 React 的運作機制，
+但官方的範例並不是完整的 Web app，
+所以接下來兩次教學我們會實際地建立一個 React web app，
+與會的 developer 可以藉此實際地感受到使用 React 開發前端與傳統方式的差別。
