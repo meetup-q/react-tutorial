@@ -38,7 +38,7 @@ name = 'handsome man'
 
 let age = 26
 
-age = age++
+age++
 // age is 27 
 ```
 
@@ -55,8 +55,10 @@ function greeting(){
 function(){
   console.log(`I don't have a name.'`)
 }
+```
 
 ```javascript
+// arrow function
 const greeting = () => { 
     console.log(`Hi, there. My name is ${name}`) 
   }
@@ -82,13 +84,11 @@ class Square {
     this.widht = Math.sqrt(value)
     this.height = Math.sqrt(value)
   }
-  
 }
 
 ```
 
 ```javascript
-
 class Foo {
     constructor(prop) {
         this.prop = prop;
@@ -100,9 +100,7 @@ class Foo {
         return 'prototypical';
     }
 }
-
 const foo = new Foo(123);
-
 ```
 
 [js class explaination](https://exploringjs.com/es6/ch_classes.html)
@@ -118,4 +116,3 @@ Foo === Foo.prototype.constructor
 # 參考資料
 1. You Don't Know JavaScript full series. 
 2. [js class explaination](https://exploringjs.com/es6/ch_classes.html)
-3. 

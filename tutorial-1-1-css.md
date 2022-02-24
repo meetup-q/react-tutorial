@@ -4,7 +4,6 @@ CSS 的全名是 Cascading Style Sheets，中文是階層樣式表。
 如果說 HTML 是網頁的骨架，那 CSS 就是網頁的皮膚，
 是它讓我們的頁面有色彩。
 
-
 CSS 的 Layout 很簡單，每一個 element 都是二維方格狀的二維盒子，
 網頁就是由一個個盒子狀的 element 組成。
 盒子有幾個部分：
@@ -18,11 +17,36 @@ CSS 的 Layout 很簡單，每一個 element 都是二維方格狀的二維盒�
 
 # 階層
 
-如果我對一個 element 設定有衝突
+樣式有以下幾種階級
+1. inline style → 最優先，應該要最少用，避免維護困難
+2. id → 次優先，常用
+3. class → 最常用，善用 class 可以減少 CSS 維護難度
+4. element → 優先度最低，利用來設定基底的樣式
+
+假如我重複設定一個 id 的樣式會發生什麼事情呢？
+CSS 是逐行直譯的，當它再讀到同樣的 CSS 會複寫舊的。
+
+```css
+#my-id{
+  height: 100px;
+}
+
+/* ~~~ */
+
+#my-id{
+  height: 80px;
+}
+/* #my-id 的高度 height 就是 80px */
+```
+
 
 # Example
 
 ```css
+#my-id{
+  height: 100px;
+}
+
 .my-box{
   display: block;
   height: 100px;
@@ -33,4 +57,13 @@ CSS 的 Layout 很簡單，每一個 element 都是二維方格狀的二維盒�
   background-color: rgba(123, 220, 112, 0.5);
 }
 
+nav{
+  width: 100%;
+  height: 50px;
+}
+```
+
+```html
+<div id="my-id" style="height: 10px"></div>
+<!-- 因為 inline style 存在，他的優先度最高，所以 height 是 10px -->
 ```
