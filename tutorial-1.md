@@ -124,6 +124,16 @@ npm 是 Node.js 套件管理器（Node.js package manager），
 [^1]:Github 也為 microsoft 的子公司，
 此舉被解讀為增加 JavaScript 使用人數。
 
+當我們要開始一個 npm 專案時，
+可以使用 `npm init` 進行初始化，
+我們的 root directory 就會出現 package.json 表示成功，
+當我們的專案需要更多套件的時候必須在專案資料夾下執行 `npm install package`，
+套件會被下載到專案資料夾內，
+並且記錄在 package.json 裡面。
+每個專案的 dependencies 都會被下載到自己的 node_modules 資料夾裡面，
+並不會污染到 global environment。
+
+
 # React.js
  
 React.js 是 Facebook 在 2013 年發表的前端框架。
@@ -140,39 +150,7 @@ react.js 是世界上最活躍的前端框架。
 7. virtual dom
 8. jsx
 
-當我們的專案需要更多套件的時候必須在專案資料夾下執行 `npm install package`，
-套件會被下載到專案資料夾內，
-並且記錄在 package.json 裡面。
-每個專案的 dependencies 都會被下載到自己的 node_modules 資料夾裡面，
-並不會污染到 global environment。
 
-React 是 declarative 的工具，
-意思是我們只要告訴它結果，
-中間的過程它會自己想辦法。
-如下面這個例子，
-這是一個紀錄與顯示 button 被點擊的次數的 component，
-點擊 button 之後他就會更新 state count 並且重新 render component 以顯示新的數字。
-
-```jsx
-const Counter = () => {
-  const [count, setCount] = useState(0)
-  return(
-    <div>
-	  <button onClick={() => {setCount(count++)}}></button>
-	  <div>The button has been hit {count} times</div>
-    </div>
-  )
-}
-```
-
-jQuery 就是典型的 Imperative 工具，
-為了達成一個功能，developer 必須用寫下每一個步驟。
-Imperative 的好處在於我們可以更掌握底層運作，
-壞處是 code 會變得繁瑣；
-declarative 的好處就是 code 更好寫，
-可讀性也會提高，
-壞處是相對的就是底層運作被掩蓋住了，
-遇到高效調教時比較麻煩。
 
 ### Single Page Application
 
