@@ -271,7 +271,7 @@ const Counter = () => {
   const [count, setCount] = useState(0)
   return(
     <div>
-	  <button onClick={() => {setCount(count++)}}></button>
+	  <button onClick={() => {setCount(count++)}}>Click!</button>
 	  <div>The button has been hit {count} times</div>
     </div>
   )
@@ -287,8 +287,8 @@ const Counter = () => {
 
 ```html
 <div>
-  <button id="click-buttom"></button>
-  <div>The button has been hit <span id="click-times"><span> times</div>
+  <button id="click-buttom">Click!</button>
+  <div>The button has been hit <span id="click-times"></span> times.</div>
 </div>
 ```
 
@@ -299,7 +299,8 @@ var clickTimes = 0
 $('#click-times').html(
   clickTimes
 )
-$("#click-button").on('click', () => {
+$("#click-buttom").on('click', function(){
+  console.log(clickTimes)
   clickTimes++
   $("#click-times").html(
     clickTimes
